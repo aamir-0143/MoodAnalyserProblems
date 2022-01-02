@@ -7,6 +7,7 @@ namespace MoodAnalyserProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Happy Or Sad Mood !");
+            Console.WriteLine("Given Sad Mood Should Return SAD ");
         }
     }
 }
