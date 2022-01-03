@@ -7,7 +7,7 @@ namespace MoodAnalyserTestCase
     public class TestCases
     {
         /// <summary>
-        /// TC 1.1: Given?I am in Sad Mood? message Should Return SAD.
+        /// Repeat TC 1.1: Given?I am in Sad Mood? message in Constructor Should Return SAD.
         /// </summary>
         [TestMethod]
         public void GivenSadMoodShouldReturnSAD()
@@ -15,31 +15,32 @@ namespace MoodAnalyserTestCase
             //Arrange
             string expected = "SAD";
             string message = "I am in Sad Mood";
-            MoodAnalyser moodAnalyse = new MoodAnalyser();
+            MoodAnalyser moodAnalyse = new MoodAnalyser(message);
 
             //Act
-            string mood = moodAnalyse.AnalyseMood(message);
+            string mood = moodAnalyse.AnalyseMood();
 
             //Assert
             Assert.AreEqual(expected, mood);
         }
 
         /// <summary>
-        /// TC 1.2: Given? Any Mood? message Should Return HAPPY.
+        /// TC 1.2: Given? Haapy Mood? message in Constructor Should Return HAPPY.
         /// </summary>
         [TestMethod]
-        public void GivenAnyMoodShouldReturnHAPPY()
+        public void GivenHappyMoodShouldReturnHAPPY() 
         {
             //Arrange
             string expected = "HAPPY";
-            string message = "I am in Any Mood";
-            MoodAnalyser moodAnalyse = new MoodAnalyser();
+            string message = "I am in Happy Mood";
+            MoodAnalyser moodAnalyse = new MoodAnalyser(message);
 
             //Act
-            string mood = moodAnalyse.AnalyseMood(message);
+            string mood = moodAnalyse.AnalyseMood();
 
             //Assert
             Assert.AreEqual(expected, mood);
         }
+
     }
 }
