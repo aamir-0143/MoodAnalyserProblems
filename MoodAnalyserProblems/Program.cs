@@ -13,7 +13,7 @@ namespace MoodAnalyserProblems
             Console.WriteLine("Given Sad Mood message in Constructor Should Return SAD ");
             Console.WriteLine("Given Happy Mood message in Constructor Should Return HAPPY ");
             Console.WriteLine("Invalid Mood");
-            Console.WriteLine("Given null Mood Should Return HAPPY");
+            Console.WriteLine("Given Null Mood Should Return HAPPY");
         }
     }
 }
