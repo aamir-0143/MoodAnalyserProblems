@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoodAnalyserProblems;  
+using MoodAnalyserProblems;
 
 namespace MoodAnalyserTestCase
 {
@@ -28,7 +28,7 @@ namespace MoodAnalyserTestCase
         /// TC 1.2: Given? Haapy Mood? message in Constructor Should Return HAPPY.
         /// </summary>
         [TestMethod]
-        public void GivenHappyMoodShouldReturnHAPPY() 
+        public void GivenHappyMoodShouldReturnHAPPY()
         {
             //Arrange
             string expected = "HAPPY";
@@ -60,6 +60,7 @@ namespace MoodAnalyserTestCase
             //Assert
             Assert.AreEqual(expected, mood);
         }
+
         ///<summary>
         ///TC 3.1: Given Null Mood Should Throw MoodAnalysisException.
         /// </summary>
@@ -78,6 +79,24 @@ namespace MoodAnalyserTestCase
             }
         }
 
+        ///<summary>
+        ///TC 3.2: Given Empty Mood Should Throw MoodAnalysisException Indicating Empty Mood.
+        /// </summary>
+        [TestMethod]
+        public void Given_EMPTY_Mood_Should_Throw_MoodAnalysisException_Indicating_EMPTY_Mood()
+        {
+            try
+            {
+                string message = "";
+                MoodAnalyser moodAnalyse = new MoodAnalyser(message);
+                string mood = moodAnalyse.AnalyseMood();
+            }
+            catch (MoodAnalyserCustomException e)
+            {
+                Assert.AreEqual("Mood should not be Empty", e.Message);
+            }
 
+
+        }
     }
 }

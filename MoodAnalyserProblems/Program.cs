@@ -16,6 +16,7 @@ namespace MoodAnalyserProblems
             Console.WriteLine("Given Null Mood Should Return HAPPY");
             Console.WriteLine("Invalid Mood throw Custom Exception");
             Console.WriteLine("Test Case 3.1 Given Null Mood");
+            Console.WriteLine("Test Case 3.2 Indicating Empty Mood");
         }
     }
 }
