@@ -14,6 +14,7 @@ namespace MoodAnalyserProblems
             Console.WriteLine("Given Happy Mood message in Constructor Should Return HAPPY ");
             Console.WriteLine("Invalid Mood");
             Console.WriteLine("Given Null Mood Should Return HAPPY");
+            Console.WriteLine("Invalid Mood throw Custom Exception");
         }
     }
 }
