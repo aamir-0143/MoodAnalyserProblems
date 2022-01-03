@@ -41,7 +41,12 @@ namespace MoodAnalyserTestCase
             //Assert
             Assert.AreEqual(expected, mood);
         }
+
+        /// <summary>
+        /// TC 2.1: Given null Mood Should Return HAPPY?
+        /// </summary>
         [TestMethod]
+        [DataRow("I am in HAPPY Mood")]
         [DataRow(null)]
         public void GivenNullMoodShouldReturnHAPPY(string message)
         {
